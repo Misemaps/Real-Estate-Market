@@ -1,0 +1,288 @@
+
+        #map {
+            background-color: #ffffff
+        }
+        body{
+            margin: 0px;
+             z-index:-1; 
+         }
+
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 0px;
+            margin-top: 3px;
+            margin-bottom: 1px;
+            align-items: center;
+            list-style: none;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+                      padding: 3px 3px;
+                      top: 0px;
+            height: 33px;
+            border-bottom: 0.5px solid;color: rgb(66, 66, 65);
+            z-index: 10000;
+        }
+
+        .logo img {width: 90px;height: 32px;
+            padding-top: 3px;
+           margin-left: 0px;
+       padding-right: 0px;}
+           .Logo2 img {width: 200px;height: 33px;
+               padding-top: 3px;   
+               padding-right: 20px; 
+               position: relative;
+           margin-left: 0px;}
+           .menu {display: flex;}
+           .menu li {padding-left: 28px;}
+           .menu li a {
+               display: inline-block;
+               text-decoration: none;
+               color: var(--color1);
+               text-align: center;
+               transition: 0.15s ease-in-out;
+               position: relative;
+               text-transform: uppercase;
+           }
+           .menu li a::after {
+               content: "";
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               width: 0;
+               height: 1px;
+               background-color: var(--color1);
+               transition: 0.15s ease-in-out;
+           }
+
+           #box1{
+            margin-right: 600;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: justify;
+            font-family: 'sans-serif',serif,Arial,'Times New Roman','Verdana', 'Geneva', Tahoma, sans-serif;}
+
+            .center{
+                display:block; 
+                margin-left: auto;
+                margin-right:auto;
+                width:60%;
+                height: auto;       
+           }
+
+
+
+
+           .menu li a:hover:after {width: 100%;}
+           .open-menu , .close-menu {
+               position: absolute;
+               color: var(--color1);
+               cursor: pointer;
+               font-size: 1.5rem;
+               display: none;
+           }
+           .open-menu {
+               top: 50%;
+               right: 20px;
+               transform: translateY(-50%);
+           }
+           .close-menu {
+               top: 20px;
+               right: 20px;
+           }
+           #check {display: none;}
+
+           .container{
+            width:100%;
+            height:100vh;
+            background: #0580c4;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+          }
+
+
+
+        th {
+            text-align: left;
+            vertical-align: top;
+        }
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .info h2 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+
+
+        
+
+        @media(max-width: 610px){
+            .menu {
+                flex-direction: column;
+                align-items: last baseline;
+                justify-content: center;
+                width: 25%;
+                height: 35vh;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                z-index: 100;
+                background-color: rgb(253, 253, 252);
+                transition: all 0.2s ease-in-out;
+                border: 0.01px solid rgb(252, 251, 249)
+            }
+            .menu li {margin-top: 20px;}
+            .menu li a {padding: 10px;}
+            .open-menu , .close-menu {display: block;align-items: center;}
+            #check:checked ~ .menu {right: 0;}
+        }
+
+
+
+
+
+
+
+        .leaflet-container {
+            background: #fff;
+            padding-right: 10px;
+        }
+        .leaflet-popup-scrolled {
+            width:auto!important;
+            height: auto!important;
+            overflow: auto;
+            max-height: 70vw;
+            max-width: 65vw;
+            border-bottom: unset!important;
+            border-top: unset!important;
+        }
+        .leaflet-popup-content{
+            max-height: 80vw;
+            max-width: 75vw;
+            overflow: auto;
+        }
+        th {
+            min-width: 55px;
+        }
+        td {
+            min-width: 70px;
+        }
+        td img {
+            max-height: 40vw;
+            max-width: 32vw;
+        }
+        .leaflet-tooltip {
+            background: none;
+            box-shadow: none;
+            border: none;
+        }
+        .leaflet-tooltip-left:before, .leaflet-tooltip-right:before {
+            border: 0px;
+        }
+        }
+        .fa, .leaflet-container, a {
+            color: #000000 !important;
+        }
+        .leaflet-control-zoom-in, .leaflet-control-zoom-out,
+        .leaflet-control-locate a,
+        .leaflet-touch .leaflet-control-geocoder-icon,
+        .leaflet-control-search .search-button,
+         .leaflet-control-measure {
+            background-color: #f8f8f8 !important;
+            border-radius: 0px !important;
+            color: #000000 !important;
+        }
+        .abstract {
+            font: bold 18px 'Lucida Console', Monaco, monospace;
+            text-indent: 1px;
+            background-color: #f8f8f8 !important;
+            width: 30px !important;
+            color: #000000 !important;
+            height: 30px !important;
+            text-align: center !important;
+            line-height: 30px !important;
+        }
+        .abstractUncollapsed {
+            padding: 6px 8px;
+            font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+            background-color:#f8f8f8 !important;
+            color: #000000 !important;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            max-width: 40%;
+        }
+        .leaflet-touch .leaflet-control-layers,
+        .leaflet-touch .leaflet-bar,
+        .leaflet-control-search,
+        .leaflet-control-measure {
+            border: 3px solid rgba(255,255,255,.4) !important;
+        }
+        .leaflet-control-attribution a {
+            color: #0078A8 !important;
+        }
+        .leaflet-control-scale-line {
+            border: 2px solid #f8f8f8 !important;
+            border-top: none !important;
+            color: black !important;
+        }
+        .leaflet-control-search .search-button,
+        .leaflet-container .leaflet-control-search,
+        .leaflet-control-measure {
+            box-shadow: none !important;
+        }
+        .leaflet-control-search .search-button {
+            width: 30px !important;
+            height: 30px !important;
+            font-size: 13px !important;
+            text-align: center !important;
+            line-height: 30px !important;
+        }
+        .leaflet-control-measure .leaflet-control {
+            width: 30px !important;
+            height: 30px !important;
+        }
+        .leaflet-container .leaflet-control-search{
+            background: none !important;
+        }
+        .leaflet-control-search .search-input {
+            margin: 0px 0px 0px 0px !important;
+            height: 30px !important;
+        }
+        .leaflet-control-measure {
+            background: none!important;
+            border-radius: 4px !important;
+        }
+        .leaflet-control-measure .leaflet-control-measure-interaction {
+            background-color: #f8f8f8 !important;
+        }
+        .leaflet-touch .leaflet-control-measure
+        .leaflet-control-measure-toggle,
+        .leaflet-touch .leaflet-control-measure
+        .leaflet-control-measure-toggle:hover {
+            width: 30px !important;
+            height: 30px !important;
+            border-radius: 0px !important;
+            background-color: #f8f8f8 !important;
+            color: #000000 !important;
+            font-size: 13px;
+            line-height: 30px;
+            text-align: center;
+            text-indent: 0%;
+        }
+        .leaflet-control-layers-toggle {
+            background-color: #f8f8f8 !important;
+        }
+        .leaflet-overlay-pane {
+            z-index: 550;
+        }
+        .leaflet-popup-pane {
+            z-index: 700;
+        }
