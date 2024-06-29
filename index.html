@@ -108,6 +108,20 @@
         <script src="data/STUDIO_14.js"></script>
         <script src="data/AIRbnb_15.js"></script>
         <script>
+            function iniMap() {
+        var location={lat:-1.292066,lng:36.821945};
+        var map= new google.maps.Map(document.getElementById("map"),{
+            zoom:4,
+             center:location
+       });
+       var marker=new google.maps.Marker({
+        position:location,
+        map:map
+       });
+    }
+ </script>
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_hB7fPf4tV3oaji9YB8gDjxXOPoSDT8M&callback=initMap"></script>
+        <script>
         var highlightLayer;
         function highlightFeature(e) {
             highlightLayer = e.target;
